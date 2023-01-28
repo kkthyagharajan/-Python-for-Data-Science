@@ -1,0 +1,129 @@
+1. Which of the following is/are the correct ways of naming variables in Python?
+   2_max = 5
+   max_2 = 5
+   max2 = 5
+   max @2 = 5
+ Ans: max_2 = 5  and max2 = 5
+ 
+ 
+ 2. What does 5%11 will evaluate to
+    1
+    5
+    0
+    Syntax error
+ Ans: 5
+ Note: reminder is computed
+ 
+ 3. What does 4//7 evaluate to
+    0
+    1
+    0.0
+    4
+ Ans: 0
+  Note: Integer of Quotient is computed
+  
+ 4. What will be the output of the following code snippet?
+    num_1='100'
+    num_2='200'
+    print(num_1+num_2)
+    
+      300
+      100200
+      ‘100’ + ‘200’
+      ‘100 + 200’
+      
+  Ans: 100200
+  
+  
+  5.     num_1='100'
+         num_2='200'
+         num_1= int(num_1)
+         num_2= int(num_2)
+         print(num_1+num_2)
+         
+          300
+          100200
+         ‘100’ + ‘200’
+         ‘100 + 200’
+         
+ Ans: 300
+ 
+ 
+ 6. What is the type of the following expression?  1 + 4 / 2
+        int
+        float
+        bool
+        str
+ Ans: float
+ 
+ 7. What is the type of the following expression?
+    (1>0) and (-1<0) and (1==1)
+    
+     str
+     bool
+     True
+     False
+     
+ Ans: bool    
+ NB: only the type is asked not the result produced by the expression
+ 
+ 8. What is the output of the following code snippet?
+    12-4*(16//2**4)+32
+    
+    32
+    44
+    40
+    36
+    
+Ans: 40
+
+ 9. Which of the arithmetic operators given below cannot be used with ‘strings’ in Python?
+    *
+    -
+    +
+    All of the above
+ 
+Ans: - 
+ 
+Note: strings may be added or multiplied but may not be subtracted
+ 
+10. Consider the list of instructions and resulting outputs given below. Pick the set that is incorrect.
+    
+    print("Good", end=""
+    print("day")
+    output --> Goodday
+    
+    word1 = "Trial"
+    print("Word is %s" %word1)
+    output --> Trial
+    
+    num1 =23
+    print("Number: %f" %num1)
+    output --> Number: 23.000000
+    
+    print("ready\nsteady\ngo")
+    output --> ready
+               steady
+               go
+ 
+ options:
+ 
+  4
+  2
+  1, 3
+  1, 3, 4
+  All are correct
+ 
+ Ans: 2
+ Note: the incorrect output is asked.
+ 
+ 11. Two variables Xand Y were assigned the following values initially: X = 3 and Y = 6. Which of the following statements will help swap the values between these two variables?
+      Y = X         X = Y
+      X = Y
+      X = Y         Y = X
+      X, Y = Y, X
+ 
+ Ans: X, Y = Y, X
+ 
+ 
+ 
