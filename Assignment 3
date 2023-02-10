@@ -1,0 +1,110 @@
+
+Assignment 3 NPTEL Python for Data Science YouTube:   https://youtu.be/rJVYOCr89AA
+
+Watch the following videos for explanations
+Quiz1 Assignment 2: https://youtu.be/2y5GlrEUVDw
+Quiz2 Assignment 2: https://youtu.be/C7e4X10CUqA
+Quiz3 Assignment 1: https://youtu.be/mNpeH4kC1sU
+Quiz4 Assignment 1: https://youtu.be/8SBV1ZfimDU
+
+1. Which of the following is the correct approach to fill missing values in case of categorical variable?
+  Mean
+  Median
+  Mode
+  None of the above
+
+Ans: Mode
+
+Assume a pandas dataframe df_cars which when printed is as shown below. Based on this information, answer questions 2 and 3. 
+2. Of the following set of statements, which of them can be used to extract the column Type as a separate data frame?
+  df_cars[[’Type’]]
+  df_cars.iloc[[:, 1]
+  df_cars.loc[:, [’Type’]]
+  None of the above
+
+Ans: df_cars[[’Type’]]
+     df_cars.loc[:, [’Type’]]
+
+3. The method df_cars.describe() will give description of which of the following column?
+  Car name                         
+  Brand
+  Price (in lakhs)
+  All of the above
+
+Ans: Price (in lakhs)
+
+4. Which pandas function is used to stack the dataframes vertically?
+  pd.merge()
+  pd.concat()
+  join()
+  None of the above
+
+Ans: pd.concat()
+
+5. Which of the following are libraries in Python?
+  Pandas
+  Matplotlib
+  NumPy
+  All of the above
+
+Ans: All of the above
+
+Read the comma-separated values file  hotel bookings.csv  as a dataframe data hotel and answer questions 6 - 8. 
+Please refer to Hotel Bookings  Data Description.pdf  for data and variable description.
+
+6. Choose the appropriate command(s) to filter those booking details whose reservation-status are a No-show?
+
+Ans:  2nd Option: & 4th Option
+data_hotel_ns = data_hotel[data_hotel.reservation_status == ‘No-Show’]
+data_hotel_ns = data_hotel.loc[data_hotel.reservation_status.isin([‘No-Show’])]
+
+7. From the same data, find how many bookings were not canceled in the year 2017?
+  9064
+  6231
+  9046
+  None of the above
+
+Ans: 9064
+
+code:
+data_hotel = pd.read_csv("D:\\Nivedha YouTube Videos copied to PHD 2021-08-19 added many after that\Data Science MCQs\Assignment 3 2023\hotel_bookings.csv")
+not_cancelled=data_hotel[data_hotel.is_canceled==0]
+not_cancelled_2017_1=not_cancelled[not_cancelled.arrival_date_year==2017]
+no_of_rows=not_cancelled_2017_1.shape[0] #shape returns a tuple (no.of rows, no. of col.) 
+not_cancelled_2017_2 = data_hotel[(data_hotel.is_canceled==0)&(data_hotel.arrival_date_year==2017)]
+
+
+8. From the total bookings that were made in 2017 and not canceled, which month had the highest number of repeated guests?
+  July
+  February
+  January
+  None of the above
+
+Ans: January
+
+Code:
+grouped = not_cancelled_2017_1.groupby(["arrival_date_month", "is_repeated_guest"])
+#grouped is an object created by groupby method
+df_rows_in_group = grouped.size().reset_index(name="counts") 
+#size of each group i.e no. of rows is provided. Creates a new column 'counts' 
+repeated_guests = df_rows_in_group[df_rows_in_group.is_repeated_guest == 1]
+month_with_highest_repeated_guests = repeated_guests.loc[repeated_guests["counts"].idxmax()].arrival_date_month
+
+
+9. What will be the output of the following code?
+  
+  [bool, int, float, float, str]
+  [str, int, float, float, str]
+  [bool, int, float, int, str]
+  [bool, int, int, float, str]
+
+Ans: [bool, int, float, float, str]
+
+10. Which command is used to generate the plot shown below?
+   plt.plot(x, linestyle = “-”)
+  plt.plot(x, linestyle = “–”)
+  plt.plot(x, linestyle = “-.”)
+  plt.plot(x, linestyle = “:”)
+
+Ans: 2nd option
+plt.plot(x, linestyle = “–”)
